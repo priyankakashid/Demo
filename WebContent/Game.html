@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function selectRamdomNumber(){
+	
+	//alert("Welcome")
+    var min=1; 
+    var max=6;  
+    document.getElementById("value1").value = Math.floor(Math.random() * (+max - +min)) + +min;
+   // document.write("Random Number Generated : " + random );
+    var form = document.getElementById("vehicles");
+    form.submit();
+}
+</script>
+</head>
+<body>
+<form id="vehicles" onsubmit="GameServlet">
+Dice number:<input type="number" name="randomNumber" id="value1">
+<input type="submit" onclick="selectRamdomNumber()"><br><br>
+
+
+Reached position:<input type="number" name="reachedPosition" id="value2">
+</form>
+</body>
+</html>
